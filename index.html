@@ -1,0 +1,38 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <div class="header">
+        <div class="input">
+            <textarea v-model="alignmentText" placeholder="Paste your FASTA format text here..."></textarea>
+        </div>
+        <div class="buttons">
+            <div v-for="key in alignmentKeys">
+                <span class="key">{{key}}</span>
+                <button @click="doSolo(key)" :class="{active: solo===key}">Solo</button>
+                <button @click="doHighlight(key)" :class="{active: highlight===key}">Highlight</button>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <table>
+
+            <tr v-for="key in alignmentKeys">
+
+                <td v-if="!solo || solo === key" :class="{highlight: highlight===key || solo === key}"
+                    v-for="column in columns" :style="{opacity: charOpacity}">{{alignment[key][column]}}
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<script src="script.js">
+</script>
+
+</body>
+</html>

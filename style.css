@@ -1,0 +1,73 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttons {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.buttons button {
+    margin: 0 1em;
+    border: none;
+    background: none;
+}
+
+.header {
+    padding: 2em;
+    background: #AAB396;
+
+}
+.key {
+    display: block;
+}
+
+.content {
+    padding: 2em;
+    background: #FFF8E8;
+    height: 500px;
+    overflow: scroll;
+}
+
+.active {
+    background: #674636;
+    color: white;
+}
+
+textarea {
+    background: #FFF8E8;
+    border: 1px solid #ccc;
+    width: 1000px;
+    height: 300px;
+    border-radius: 10px;
+    padding: 2em;
+}
+
+table {
+    position: relative;
+    font-family: Volpiano;
+    font-size: 3em;
+}
+
+tr {
+    position: absolute;
+    top: 0;
+}
+
+.highlight {
+    color: darkred;
+    opacity: 0.8 !important;
+}
