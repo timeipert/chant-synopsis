@@ -24,7 +24,7 @@ Chant Synopsis takes multiple versions of a chant, represented in Volpiano notat
 - **Alignment View**: Automatically aligns multiple chant variants, displaying them in a layered format.
 - **Highlight and Solo Options**: Options to highlight or solo specific variants for detailed analysis.
 
-##Input Format
+## Input Format
 
 Chant Synopsis expects input in the form of a FASTA file containing Volpiano notation strings. A FASTA file typically looks like this:
 
