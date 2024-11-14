@@ -1,6 +1,6 @@
 <html>
 <head>
-
+    <meta charset="utf-8"/>
     <link rel="stylesheet" href="volpiano/volpiano.css"/>
     <link rel="stylesheet" href="style.css"/>
 </head>
@@ -20,20 +20,37 @@
             </div>
         </div>
     </div>
-    <div class="content">
-        <table>
+    <div class="content-wrapper">
+        <div class="content">
+            <table>
 
-            <tr v-for="key in alignmentKeys">
+                <tr v-for="key in alignmentKeys">
+                    <td v-if="!solo || solo === key" :class="{highlight: highlight===key || solo === key}"
+                        v-for="column in columns" :style="{opacity: charOpacity}">{{alignment[key][column]}}
+                    </td>
+                </tr>
+            </table>
 
-                <td v-if="!solo || solo === key" :class="{highlight: highlight===key || solo === key}"
-                    v-for="column in columns" :style="{opacity: charOpacity}">{{alignment[key][column]}}
-                </td>
-            </tr>
-        </table>
+        </div>
+        <div class="content_synopsis">
+            <table>
+                <tr v-for="key in alignmentKeys">
+                    <td class="key">
+                        <div class="key_value">{{key}}</div>
+                    </td>
+                    <td :class="{highlight: highlight===key || solo === key}"
+                        v-for="column in columns">{{alignment[key][column]}}
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 <div class="footer">
-    Visualising Multiple Sequence Alignment on Volpiano Notations. Tool by Tim Eipert. Open Source via <a href="https://github.com/timeipert/chant-synopsis">Github</a>. The default melody alignment are variations of the proper chant <em>Puer natus est nobis</em> from various sources (<a href="https://corpus-monodicum.de">Corpus monodicum</a> and <a href="http://gregorianik.uni-regensburg.de/gr/">Graduale Synopticum</a>.
+    Visualising Multiple Sequence Alignment on Volpiano Notations. Tool by Tim Eipert. Open Source via <a
+        href="https://github.com/timeipert/chant-synopsis">Github</a>. The default melody alignment are variations of
+    the proper chant <em>Puer natus est nobis</em> from various sources (<a href="https://corpus-monodicum.de">Corpus
+    monodicum</a> and <a href="http://gregorianik.uni-regensburg.de/gr/">Graduale Synopticum</a>.
 </div>
 <script src="script.js">
 </script>
