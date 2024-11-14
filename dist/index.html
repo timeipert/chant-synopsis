@@ -15,8 +15,8 @@
         <div class="buttons">
             <div v-for="key in alignmentKeys">
                 <span class="key">{{key}}</span>
-                <button @click="doSolo(key)" :class="{active: solo===key}">Solo</button>
-                <button @click="doHighlight(key)" :class="{active: highlight===key}">Highlight</button>
+                <button @click="toggleSolo(key)" :class="{active: solo===key}">Solo</button>
+                <button @click="toggleHighlight(key)" :class="{active: highlight===key}">Highlight</button>
             </div>
         </div>
     </div>

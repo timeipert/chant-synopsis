@@ -13,12 +13,22 @@ html, body {
     position: absolute;
     top: 20px;
     left: 20px;
+    width: 170px;
+    padding: 0.5em;
+    background: #FFF8E8;
+    height: 300px;
+    overflow: scroll;
 }
 
 .buttons button {
     margin: 0 1em;
     border: none;
     background: none;
+}
+.buttons>div {
+    background: #AAB396;
+    padding: 0.3em;
+
 }
 
 .header {
