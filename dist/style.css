@@ -30,6 +30,15 @@ html, body {
     padding: 0.3em;
 
 }
+.footer {
+    position:fixed;
+    bottom:0;
+    left: 0;
+    background: #AAB396;
+    padding: 1em;
+    width: 100vw;
+    font-size: 0.9em;
+}
 
 .header {
     padding: 2em;
