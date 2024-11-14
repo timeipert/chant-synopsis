@@ -1,9 +1,12 @@
 # Chant Synopsis
 
-You can use the app at: https://chantsynopsis.web.app/
-
-
 Chant Synopsis is a tool for generating visualizations of monophonic chants by layering multiple sequences above each other. It provides an easy-to-perceive view of where there are uncertain phrases and where there is stability across all passages. Inspired by synoptic viewers from multiple-sequence alignment approaches in bioinformatics, Chant Synopsis adapts these concepts to the specific requirements of musical notation for monophonic chant.
+
+You can use the app [here](https://chantsynopsis.web.app/). 
+
+https://github.com/user-attachments/assets/6ed7eb02-d150-492f-be83-f1f2d5f64848
+
+
 
 ## Features
 
@@ -22,7 +25,7 @@ Chant Synopsis takes multiple versions of a chant, represented in Volpiano notat
 - **Alignment View**: Automatically aligns multiple chant variants, displaying them in a layered format.
 - **Highlight and Solo Options**: Options to highlight or solo specific variants for detailed analysis.
 
-##Input Format
+## Input Format
 
 Chant Synopsis expects input in the form of a FASTA file containing Volpiano notation strings. A FASTA file typically looks like this:
 
